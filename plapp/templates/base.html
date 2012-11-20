@@ -9,7 +9,7 @@
 
 <meta http-equiv=X-UA-Compatible content='chrome=1'>
 <meta name=description content='{% blocktrans with settings.SITE_NAME as name %}Planning an appointment? {{ name }} helps you and the invitees to pick the right date and time.{% endblocktrans %}'>
-<meta property='og:title' content='{% blocktrans with settings.SITE_NAME as name %}{{ name }} the appointment planner{% endblocktrans %}'>
+<meta property='og:title' content='{% blocktrans with settings.SITE_NAME as name %}{{ name }} appointment planner{% endblocktrans %}'>
 <meta property='og:site_name' content='{{ settings.SITE_NAME }}'>
 <meta property='og:image' content='{{ settings.SCREENSHOT }}'>
 
@@ -63,14 +63,15 @@
     <a class=sign-out href=/signout>{% trans "Sign out" %}</a>
   </div>
   {% endif %}<div class=menu>
-    <h1><b>{{ settings.SITE_NAME }}</b> {% trans "the appointment planner" %}</h1>
+    <h1>{{ settings.SITE_NAME }} {% trans "appointment planner" %}</h1>
     <ul>
       <li><a href=/>{% trans "New appointment" %}</a>
       {% if settings.ABOUT_URL %}<li><a href='{{ settings.ABOUT_URL }}' class=external>{% blocktrans with site=settings.SITE_NAME %}About {{ site }}{% endblocktrans %}</a>{% endif %}
-      <li class=chrome-only><a href=https://chrome.google.com/webstore/detail/gaplcjgcfjoianghpkfkbgggdidedcid class='external app-link'>{% blocktrans with site=settings.SITE_NAME %}Install {{ site }} in Chrome{% endblocktrans %}</a>
+      <!--
       <li class=separator>
       <li><h2>{% trans "Language" %}{% for language in LANGUAGES %}</h2>
       <li class='radio{% if language.0 == request.LANGUAGE_CODE %} checked{% endif %}'><a data-language={{ language.0 }}>{{ language.1 }}</a>{% endfor %}
+      -->
     </ul>
   </div>{% if user %}
   <div class=menu>

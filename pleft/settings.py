@@ -26,12 +26,12 @@ from local_settings import *
 
 TEMPLATE_DEBUG = DEBUG
 
-SITE_NAME = 'Pleft'
+SITE_NAME = 'Upstream University'
 
 ALPHA = False
 
 ADMINS = (
-    ('Sander Dijkhuis', 'sander@pleft.com'),
+    ('Adolfo Brandes', 'arbrandes@upstream-university.org'),
 )
 
 MANAGERS = ADMINS
@@ -39,6 +39,11 @@ MANAGERS = ADMINS
 SITE_BASE = 'http://' +  SITE_DOMAIN
 
 STATIC_URL = '/static/'
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+)
 
 LANGUAGE_CODE = 'en'
 USE_I18N = True
@@ -60,10 +65,10 @@ TEMPLATE_DIRS = (
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 
-ABUSE_EMAIL = 'abuse@pleft.com'
-MAIL_SENDER = 'Pleft <noreply@pleft.com>'
+ABUSE_EMAIL = 'abuse@upstream-university.org'
+MAIL_SENDER = 'Upstream University <noreply@upstream-university.org>'
 
 EMAIL_LOGO = SITE_BASE + '/static/site/images/mail-logo.png'
-EMAIL_INFO = 'info@pleft.com'
+EMAIL_INFO = 'info@upstream-university.org'
 
 SCREENSHOT = SITE_BASE + '/static/images/thumbnail.png'

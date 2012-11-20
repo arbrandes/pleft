@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+NUM_WORKERS=3
+
+source virtualenv/bin/activate
+exec virtualenv/bin/gunicorn \
+	--workers $NUM_WORKERS \
+	--log-level DEBUG \
+	--bind 127.0.0.1:8001 \
+	pleft.wsgi:application

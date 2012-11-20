@@ -16,18 +16,7 @@
 {% block content %}
 
 <div class=side-help>
-  <p id=presentation-button-p><a id=presentation-button class=in-popup href=http://www.youtube.com/watch?v=q6VC-jLOBWI title='{% trans "Pleft: the presentation!" %}'><img src='/static/images/presentation-thumb.jpg' alt='{% trans "Watch our presentation!" %}'></a>
-  <p>{% blocktrans with settings.SITE_NAME as name %}{{ name }} helps you to find the right date and time for your appointments.{% endblocktrans %} {% blocktrans with settings.SITE_NAME as name %}Propose a few dates and let the invitees tell {{ name }} when they’re available.{% endblocktrans %}
-  <br><br>
-  <p>{% trans "The invitees will receive an email that looks like this:" %}
-  <p><a class=in-popup href=/static/images/preview-mail.png title='{% trans "Example invitation mail" %}'><img src='/static/images/preview-mail-small.png'></a>
-  <p>{% trans "Both you and the invitees will then get a nice overview:" %}
-  <p><a class=in-popup href=/static/images/preview-overview.png title='{% trans "Example appointment overview" %}'><img src='/static/images/preview-overview-small.png'></a>
-  <div class=popup>
-    <p><a title=Close>×</a>
-    <h1></h1>
-    <div></div>
-  </div>
+	<p>This appointment planner helps you to find the right date and time for your appointments. Propose a few dates and let the invitees choose when they’re available.</p>
 </div>
 
 <div class=appointment>

@@ -4,3 +4,5 @@
 *.mo
 *.db
 pleft/local_settings.py
+virtualenv
+logs

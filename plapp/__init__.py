@@ -94,6 +94,6 @@ def prepare_mail(template, name, title, url, initiator):
     html = render_to_string(template, html_params)
     html = re.sub('\n(\n)+', '\n\n', html.strip())
     html = html.replace('\n\n', '<p>').replace('\n', '<br>')
-    html = '<div style="font:14px Arial,sans-serif;color:#000;background:#fff;max-width:420px"><p><img src="%s" alt="%s"><p>%s</div>\n' % (settings.EMAIL_LOGO, settings.SITE_NAME, html)
+    html = '<div style="font:14px Arial,sans-serif;color:#000;background:#fff;max-width:420px">%s</div>\n' % html
 
     return {'body': body, 'html': html}
